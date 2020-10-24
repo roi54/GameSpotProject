@@ -4,27 +4,27 @@
     <div>
         <h1 class="game-title"> Suggested for you!</h1>
     </div>
-    <div>
+    <div class="container-fluid">
         {% for game in APIreqcont %}
-            <div class="media gamepreview">
+            <div class="media gamepreview row border border-white">
                 {% if loop.index % 2 %}
-                    <div>
+                    <div class="col-sm">
                         <img class="img-mr-3" src="{{game['background_image']}}">
                     </div>
-                    <div class="media-body">
+                    <div class="media-body col-sm">
                         <a href="https://rawg.io/games/{{game['slug']}}">
                             <h1 class="mt-0">{{game["name"]}}</h1>
                         </a>
                         <p>{{ game["short_description"]}}</p>
                     </div>
                 {% else %}
-                    <div class="media-body">
+                    <div class="media-body col-sm">
                         <a href="https://rawg.io/games/{{game['slug']}}">
                             <h1 class="mt-0">{{game["name"]}}</h1>
                         </a>
                         <p>{{ game["short_description"]}}</p>
                     </div>
-                    <div>
+                    <div class="col-sm">
                         <img class="img-mr-3" src="{{game['background_image']}}">
                     </div>  
                 {% endif %}  
