@@ -2,28 +2,30 @@
 {% block title %}HomePage{% endblock %}
 {% block content %}
 <span class="game-title">Game Of The Week</span>
-<div class="media gamepreview">
-    <div class="image-w-header">
-        <img src='{{gotw["background_image"]}}' class="mr-3">
-    </div>
-    <div class="media-body">
-        <h1 class="mt-0"> {{gotw['name']}} </h1>
-        <p class>
-            {{gotw['description_raw']}}
-        </p>
-        <p class="font-weight-bold">
-            {{opinion}}
-        </p>
-        <p class="font-weight-bold">
-            {% for i in range(rating) %}
-                <span class="fa fa-star checked"></span>
-            {% endfor %}
-            {% if rating < 5 %}
-                {% for i in range(5-rating) %}
-                <span class="fa fa-star"></span>
+<div class="container-fluid">
+    <div class="media gamepreview row">
+        <div class="image-w-header col-sm">
+            <img src='{{gotw["background_image"]}}' class="mr-3">
+        </div>
+        <div class="media-body col-sm">
+            <h1 class="mt-0"> {{gotw['name']}} </h1>
+            <p class>
+                {{gotw['description_raw']}}
+            </p>
+            <p class="font-weight-bold">
+                {{opinion}}
+            </p>
+            <p class="font-weight-bold">
+                {% for i in range(rating) %}
+                    <span class="fa fa-star checked"></span>
                 {% endfor %}
-            {% endif %}
-        </p>
+                {% if rating < 5 %}
+                    {% for i in range(5-rating) %}
+                    <span class="fa fa-star"></span>
+                    {% endfor %}
+                {% endif %}
+            </p>
+        </div>
     </div>
 </div>
 <div>

@@ -54,15 +54,8 @@ img{
     margin-left: 20px;
 }
 
-.footer-gen{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px 0 20px ;
-}
-
-.footer-gen h3{
-    font-size: 16px;
-
+.col-sm {
+    text-align: center !important;
 }
 
 
