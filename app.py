@@ -17,7 +17,7 @@ def trending():
 @app.route('/search', methods=['POST'])
 def search():
     seacrh_radio = request.form['search-radios']
-    search_word = request.form['search-word']
+    search_word = request.form['search-word'].lower()
     if " " in search_word:
             search_word = search_word.replace(" ", "-")
     if seacrh_radio == 'genre':
