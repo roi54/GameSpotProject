@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(113, 241, 241);
+}
+nav{
+    border-radius: 10px;
+}
+
+img{
+    max-width: 400px;
+    height: auto;
+}
+.nav-link{
+    color: black;
+    
+}
+
+
+.gamepreview{
+    margin-top: 20px;
+    
+}
+
+.gamepreview > div{
+    margin: 15px;
+}
+
+
+
+.description{
+    font-family: sans-serif;
+}
+
+.checked{
+    color:orange
+}
+
+.image-w-header{
+    display: flex;
+    flex-direction: column;
+}
+.game-title{
+    font-size:45px;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    color: beige;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+    border-radius: 30px;
+}
+
+.searching-form{
+    margin-left: 20px;
+}
+
+.footer-gen{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px ;
+}
+
+.footer-gen h3{
+    font-size: 16px;
+
+}
+
+
+#search-line{
+    font-size: 20px;
+}
+
+#search-word{
+    width: 50%;
+    border-radius: 10px;
+}
+
+#search-form{
+    margin: 3% 1% 10% 10%
+}
+

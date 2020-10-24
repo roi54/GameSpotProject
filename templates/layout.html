@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}- GameSpotProject</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/style.css">
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-light bg-info nav-pills justify-content-start">
+        <a class="nav-link navbar-brand active" href="/">GameSpot</a>
+        <a class="nav-link " href="/trending">Trending</a>
+    </nav>
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    <div class="footer-gen bg-info fixed-bottom">
+        <h3>Roi Nachmias GameSpotProject</h3>
+        <h3> All the data in this website is from RAWG awesome API! All rights reserved to them!</h3>
+        <a href="mailto:rnach15@gmail.com" style="color: black; background-color:aliceblue">contact me</h3>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

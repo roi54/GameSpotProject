@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Trending{% endblock %}
+{% block content %}
+        <span class="game-title">Trending Games</span>
+        {% for game in trend_games %}
+            <div class="media gamepreview">
+                {% if loop.index % 2 %}
+                    <div class="image-w-header">
+                        <img src='{{game["background_image"]}}' class="mr-3">
+                    </div>
+                    <div class="media-body">
+                        <a href="https://rawg.io/games/{{game['slug']}}">
+                            <h1 class="mt-0">{{game["name"]}}</h1>
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="media-body">
+                        <a href="https://rawg.io/games/{{game['slug']}}">
+                            <h1 class="mt-0">{{game["name"]}}</h1>
+                        </a>
+                    </div>
+                    <div class="image-w-header">
+                        <img src='{{game["background_image"]}}' class="mr-3">
+                    </div>
+                {% endif %}
+            </div>
+
+        {% endfor %}
+            
+{% endblock %}
+</html>

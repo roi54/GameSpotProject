@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}HomePage{% endblock %}
+{% block content %}
+<span class="game-title">Game Of The Week</span>
+<div class="media gamepreview">
+    <div class="image-w-header">
+        <img src='{{gotw["background_image"]}}' class="mr-3">
+    </div>
+    <div class="media-body">
+        <h1 class="mt-0"> {{gotw['name']}} </h1>
+        <p class>
+            {{gotw['description_raw']}}
+        </p>
+        <p class="font-weight-bold">
+            {{opinion}}
+        </p>
+        <p class="font-weight-bold">
+            {% for i in range(rating) %}
+                <span class="fa fa-star checked"></span>
+            {% endfor %}
+            {% if rating < 5 %}
+                {% for i in range(5-rating) %}
+                <span class="fa fa-star"></span>
+                {% endfor %}
+            {% endif %}
+        </p>
+    </div>
+</div>
+<div>
+    <span class="game-title" id="search-line"> Search Games suggestions for you!</span>
+</div>
+<div class="searching-form">
+    <form id="search-form" method="POST" action="/search">
+        <div class="form-group font-weight-bold">
+            <label for="search-word">Type a game you love!</label>
+            <input type="text" name="search-word" class="form-control" id="search-word">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="search-radios" value="games" id="game-radio" checked>
+            <label class="form-check-label" for="game-radio">
+                Search with game
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="search-radios" value="genre" id="genre-radio">
+            <label class="form-check-label" for="genre-radio">
+                Search with genre
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
