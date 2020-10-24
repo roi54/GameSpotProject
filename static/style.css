@@ -4,7 +4,7 @@ body{
 nav{
     border-radius: 10px;
 }
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
     img{
         max-width: 100px;
         height: auto;
@@ -14,7 +14,12 @@ nav{
     img{
         max-width: 400px;
         height: auto;
-    }
+    } */
+img{
+    max-width: 400px;
+    width: 80%;
+    height: auto;
+}
 .nav-link{
     color: black;
     
